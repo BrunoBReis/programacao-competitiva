@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(void) {
+  ios::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  string s;
+  cin >> s;
+
+  // menos um porque os espacos em que se pode
+  // colocar o mais eh apenas entre os numeros
+  long long n = s.size() - 1, ans = 0;
+
+  for (int i = 0; i < (1 << n); i++) {
+    long long start = 0;
+    for (int j = 0; j < n; j++)
+      if (i & (1 << j)) {
+        ans += stoll(s.substr(start, (j + 1) - start));
+        start = j + 1;
+      }
+    ans += stoll(s.substr(start, s.size() - start));
+  }
+
+  cout << ans << '\n';
+
+  return 0;
+}

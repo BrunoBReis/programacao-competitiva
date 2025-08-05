@@ -1,0 +1,29 @@
+all paris
+  algoritmo usado deve ser de busca completa
+    dá para fazer por gerador ou filtro?
+s1 e s2
+  não podem ter números repetidos
+s1 / s2 = N;
+  N é um valor passado no input
+
+input
+V
+  quantidade de test cases
+N
+  para cada test case
+
+ouput
+s1 / s2 = N
+black line separado se houver mais de um test case
+
+
+duvidas
+qual operação matemática eu posso fazer para conseguir encontrar todas as divisões, dado um s1 e s2 (cujo não possuem números repetidos) de um dado número?
+
+
+solução
+- gerar todos os números possíveis (aqueles em que não há nenhum número repetido)
+- fazer uma combinação entre eles (cujo s1 seja diferente de s2) para chegar no N
+
+observações:
+- s1 e s2 não podem ter 

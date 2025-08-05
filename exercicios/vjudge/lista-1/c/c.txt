@@ -1,0 +1,52 @@
+problemas
+  o input vem como uma string
+    como eu posso transformar essa string em numero?
+      stoi || stol || stoll
+      s[i] - '0'
+  quias são todos os conjuntos de soma?
+    2^(N-1) (pois o mais deve ficar entre os numeros)
+      qual a diferença entre 2^(N-1) e 2^N - 1
+        a primeira se refere a contar um digito a menos
+        a segunda se refere a transformar todos os digitos em 1
+          dado um número em binário
+          10000 - 1 = 1111
+    sendo N, numeros de algarismos
+escrevendo na mao:
+caso 1234:
+n = 3;
+00:
+  start = 0
+  0 & 1
+    nao
+  0 & 10
+    nao
+  ans += 123
+01:
+  start = 0;
+  1 & 1
+    ans += 1;
+    start 1;
+  1 & 10
+    nao
+  ans += 23
+10:
+  start = 0;
+  10 & 1
+    nao
+  10 & 10
+    ans += 12
+    start = 2;
+  ans += 3;
+(caso a parte para ver a implicância do start)
+11:
+  start = 0;
+  11 & 1
+    ans += 1;
+    start = 1;
+  11 & 10
+    ans += 2
+    start = 3
+  11 & 100
+    nao
+  ans += 34
+  

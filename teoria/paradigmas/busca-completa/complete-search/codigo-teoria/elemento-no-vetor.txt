@@ -1,0 +1,8 @@
+problema
+  encontre o elemento x no vetor, retornando sua posição na lista
+pensamento
+  primeiro o vetor é ordenado?
+    se for eu posso usar um algoritimo mais otimizado como busca binária
+    assim minha complexidade fica O(logN)
+  caso não seja
+    faz mais sentido eu só buscar O(N) já que para ordernar e buscar seria O(NlogN)

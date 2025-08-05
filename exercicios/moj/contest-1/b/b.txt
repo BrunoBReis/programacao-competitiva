@@ -1,0 +1,4 @@
+cuidado com o tamanho das variaveis
+
+formula para a pa
+  Sn = (n/2) * (a1 + an)
