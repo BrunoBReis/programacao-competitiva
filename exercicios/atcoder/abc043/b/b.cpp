@@ -7,20 +7,28 @@ int main(void) {
   cin.tie(NULL);
 
   string s; cin >> s;
-  stack<char> q;
+  stack<char> st;
 
-  for (char x : s) {
-    if (x == 'B' && !q.empty())
-      q.pop();
+  for (char c : s) {
+    if (c != 'B')
+      st.push(c);
     else
-      if (x != 'B') q.push(x);
+      if (!st.empty())
+        st.pop();
   }
 
-  if (q.empty()) exit(0);
+  if (st.empty()) exit(EXIT_SUCCESS);
 
-  while(!q.empty()) {
-    cout << q.top();
-    q.pop();
+  stack<char> rst;
+  
+  while(!st.empty()) {
+    rst.push(st.top());
+    st.pop();
+  }
+
+  while(!rst.empty()) {
+    cout << rst.top();
+    rst.pop();
   }
 
   cout << '\n';
